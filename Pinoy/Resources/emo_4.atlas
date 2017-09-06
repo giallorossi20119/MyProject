@@ -1,0 +1,69 @@
+
+emo_4.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2222
+  rotate: false
+  xy: 553, 198
+  size: 157, 43
+  orig: 157, 43
+  offset: 0, 0
+  index: -1
+anhkhongthieu
+  rotate: false
+  xy: 211, 178
+  size: 340, 63
+  orig: 340, 63
+  offset: 0, 0
+  index: -1
+blink
+  rotate: false
+  xy: 774, 193
+  size: 49, 48
+  orig: 49, 48
+  offset: 0, 0
+  index: -1
+dollar
+  rotate: false
+  xy: 435, 92
+  size: 109, 84
+  orig: 109, 84
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 2, 2
+  size: 61, 31
+  orig: 61, 31
+  offset: 0, 0
+  index: -1
+gang
+  rotate: false
+  xy: 2, 35
+  size: 207, 206
+  orig: 207, 206
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 712, 196
+  size: 60, 45
+  orig: 60, 45
+  offset: 0, 0
+  index: -1
+smk
+  rotate: false
+  xy: 211, 30
+  size: 222, 146
+  orig: 222, 146
+  offset: 0, 0
+  index: -1
+tien
+  rotate: false
+  xy: 435, 30
+  size: 115, 60
+  orig: 115, 60
+  offset: 0, 0
+  index: -1

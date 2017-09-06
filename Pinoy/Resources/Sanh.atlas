@@ -1,0 +1,41 @@
+
+Sanh.png
+size: 542,542
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sanh/Big_bg
+  rotate: false
+  xy: 0, 483
+  size: 542, 59
+  orig: 542, 59
+  offset: 0, 0
+  index: -1
+sanh/bich
+  rotate: false
+  xy: 0, 442
+  size: 35, 39
+  orig: 35, 39
+  offset: 0, 0
+  index: -1
+sanh/co
+  rotate: false
+  xy: 75, 446
+  size: 36, 35
+  orig: 36, 35
+  offset: 0, 0
+  index: -1
+sanh/ro
+  rotate: false
+  xy: 0, 400
+  size: 33, 40
+  orig: 33, 40
+  offset: 0, 0
+  index: -1
+sanh/tep
+  rotate: false
+  xy: 37, 444
+  size: 36, 37
+  orig: 36, 37
+  offset: 0, 0
+  index: -1

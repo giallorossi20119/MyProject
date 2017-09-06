@@ -1,0 +1,20 @@
+
+sangvanmoi.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glowy
+  rotate: false
+  xy: 230, 133
+  size: 95, 95
+  orig: 95, 95
+  offset: 0, 0
+  index: -1
+sangvanmoi
+  rotate: false
+  xy: 2, 2
+  size: 226, 226
+  orig: 226, 226
+  offset: 0, 0
+  index: -1

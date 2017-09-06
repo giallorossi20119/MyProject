@@ -1,0 +1,71 @@
+﻿Build started 15/11/2014 12:13:05.
+     1>Project "C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\zlibvc.vcxproj" on node 2 (Rebuild target(s)).
+     1>PreBuildEvent:
+         cd ..\..\masmx86
+         bld_ml32.bat
+         :VCEnd
+          Assembling: match686.asm
+         Microsoft (R) Macro Assembler Version 11.00.50727.1
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         Microsoft (R) Macro Assembler Version 11.00.50727.1
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+          Assembling: inffas32.asm
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\.. /I..\..\masmx86 /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_NONSTDC_NO_DEPRECATE /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_WARNINGS /D ZLIB_WINAPI /D ASMV /D ASMINF /D _WINDLL /Gm- /MTd /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x86\ZlibDllDebug\Tmp\\" /Fd"x86\ZlibDllDebug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\adler32.c ..\..\..\compress.c ..\..\..\crc32.c ..\..\..\deflate.c ..\..\..\gzclose.c ..\..\..\gzlib.c ..\..\..\gzread.c ..\..\..\gzwrite.c ..\..\..\infback.c ..\..\..\inffast.c ..\..\..\inflate.c ..\..\..\inftrees.c ..\..\minizip\ioapi.c ..\..\minizip\iowin32.c ..\..\..\trees.c ..\..\..\uncompr.c ..\..\minizip\unzip.c ..\..\minizip\zip.c ..\..\..\zutil.c
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzclose.c
+         gzlib.c
+         gzread.c
+         gzwrite.c
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         ioapi.c
+         iowin32.c
+         trees.c
+         uncompr.c
+         unzip.c
+         zip.c
+         zutil.c
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /l"0x040c" /nologo /fo"x86\ZlibDllDebug\Tmp\zlib.res" zlib.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"x86\ZlibDllDebug\zlibwapi.dll" /INCREMENTAL /NOLOGO ..\..\masmx86\match686.obj ..\..\masmx86\inffas32.obj kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\zlibvc.def" /MANIFEST:NO /DEBUG /PDB:"x86\ZlibDllDebug\zlibwapi.pdb" /MAP:"x86\ZlibDllDebug\zlibwapi.map" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"x86\ZlibDllDebug\zlibwapi.lib" /MACHINE:X86 /SAFESEH:NO /MACHINE:I386 /DLL x86\ZlibDllDebug\Tmp\zlib.res
+         x86\ZlibDllDebug\Tmp\adler32.obj
+         x86\ZlibDllDebug\Tmp\compress.obj
+         x86\ZlibDllDebug\Tmp\crc32.obj
+         x86\ZlibDllDebug\Tmp\deflate.obj
+         x86\ZlibDllDebug\Tmp\gzclose.obj
+         x86\ZlibDllDebug\Tmp\gzlib.obj
+         x86\ZlibDllDebug\Tmp\gzread.obj
+         x86\ZlibDllDebug\Tmp\gzwrite.obj
+         x86\ZlibDllDebug\Tmp\infback.obj
+         x86\ZlibDllDebug\Tmp\inffast.obj
+         x86\ZlibDllDebug\Tmp\inflate.obj
+         x86\ZlibDllDebug\Tmp\inftrees.obj
+         x86\ZlibDllDebug\Tmp\ioapi.obj
+         x86\ZlibDllDebug\Tmp\iowin32.obj
+         x86\ZlibDllDebug\Tmp\trees.obj
+         x86\ZlibDllDebug\Tmp\uncompr.obj
+         x86\ZlibDllDebug\Tmp\unzip.obj
+         x86\ZlibDllDebug\Tmp\zip.obj
+         x86\ZlibDllDebug\Tmp\zutil.obj
+            Creating library x86\ZlibDllDebug\zlibwapi.lib and object x86\ZlibDllDebug\zlibwapi.exp
+         zlibvc.vcxproj -> C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.dll
+       PostBuildEvent:
+         if not exist "C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\\..\..\..\..\Deploy\VisualStudio2012\Debug" md "C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\\..\..\..\..\Deploy\VisualStudio2012\Debug"
+         copy "C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.dll" "C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\\..\..\..\..\Deploy\VisualStudio2012\Debug"
+         :VCEnd
+                 1 file(s) copied.
+     1>Done Building Project "C:\Projects\Software\Vss\Customer Archives\SmartFoxServer 2X\API Client\Cpp\trunk_api\ZLib\contrib\vstudio\vc12\zlibvc.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:26.61

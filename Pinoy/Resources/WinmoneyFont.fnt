@@ -1,0 +1,23 @@
+info face="WinmoneyFont" size=32 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1
+common lineHeight=50 base=26 scaleW=158 scaleH=166 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="WinmoneyFont.png"
+chars count=17
+char id=49 x=108 y=53 width=28 height=52 xoffset=0 yoffset=-2 xadvance=17 page=0 chnl=0 letter="1"
+char id=50 x=72 y=113 width=34 height=52 xoffset=0 yoffset=-2 xadvance=23 page=0 chnl=0 letter="2"
+char id=51 x=107 y=106 width=32 height=52 xoffset=0 yoffset=-2 xadvance=21 page=0 chnl=0 letter="3"
+char id=52 x=0 y=60 width=37 height=52 xoffset=0 yoffset=-2 xadvance=26 page=0 chnl=0 letter="4"
+char id=53 x=79 y=0 width=33 height=52 xoffset=0 yoffset=-2 xadvance=22 page=0 chnl=0 letter="5"
+char id=54 x=36 y=113 width=35 height=52 xoffset=0 yoffset=-2 xadvance=24 page=0 chnl=0 letter="6"
+char id=55 x=74 y=53 width=33 height=52 xoffset=0 yoffset=-2 xadvance=22 page=0 chnl=0 letter="7"
+char id=56 x=44 y=0 width=34 height=52 xoffset=0 yoffset=-2 xadvance=23 page=0 chnl=0 letter="8"
+char id=57 x=38 y=60 width=35 height=52 xoffset=0 yoffset=-2 xadvance=24 page=0 chnl=0 letter="9"
+char id=48 x=0 y=113 width=35 height=52 xoffset=0 yoffset=-2 xadvance=24 page=0 chnl=0 letter="0"
+char id=43 x=0 y=0 width=43 height=43 xoffset=0 yoffset=6 xadvance=32 page=0 chnl=0 letter="+"
+char id=45 x=113 y=0 width=24 height=18 xoffset=0 yoffset=18 xadvance=13 page=0 chnl=0 letter="-"
+char id=95 x=0 y=44 width=42 height=15 xoffset=0 yoffset=42 xadvance=31 page=0 chnl=0 letter="_"
+char id=46 x=136 y=19 width=21 height=22 xoffset=0 yoffset=28 xadvance=10 page=0 chnl=0 letter="."
+char id=44 x=113 y=19 width=22 height=28 xoffset=0 yoffset=29 xadvance=11 page=0 chnl=0 letter=","
+char id=32 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=4 page=0 chnl=0 letter=" "
+char id=9 x=0 y=0 width=0 height=0 xoffset=0 yoffset=0 xadvance=32 page=0 chnl=0 letter="	"
+
+kernings count=0

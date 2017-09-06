@@ -1,0 +1,429 @@
+//
+//  Constant.h
+//  IndoGame
+//
+//  Created by Rainy on 8/1/14.
+//
+//
+
+
+#ifndef __IndoGame__Constant__
+#define __IndoGame__Constant__
+
+#include <iostream>
+
+#define kBaseGameWidth  960
+#define kBaseGameHeight 640
+
+//device type
+#define kDeviceIOS       0
+#define kDeviceAndroid   1
+#define kDeviceOther     2
+
+#define kAccountModeGuest    0
+#define kAccountModePersonal 1
+#define kAccountModeOther    2
+//
+#define kLoginTypeDeviceID     0
+#define kLoginTypeAccount      1
+#define kLoginTypeFacebook     2
+#define kLoginTypeGooglePlus   3
+
+//scene
+#define kSceneLoading    0
+#define kSceneLogin      1
+#define kSceneChooseGame 2
+#define kSceneChooseZone 3
+#define kSceneLobby      4
+#define kSceneInGame1    5
+#define kSceneInGame2    6
+#define kSceneInGame3    7
+#define kSceneNO         8
+
+//game
+#define kGameBanting   0
+#define kGameSusun     1
+#define kGameTongits   2
+
+//animation
+#define kAnimGirl       0
+#define kAnimLight      1
+#define kAnimWin        2
+#define kAnimLose       3
+#define kAnimWait       4
+#define kAnimGood       5
+#define kAnimBad        6
+#define kAnimNewSet     7
+#define kAnimTimeLine   8
+#define kAnimCardSwap   9
+#define kAnimExp        10
+#define kAnimDead2      11
+#define kNOAnims        12
+
+#define kBaseURL      "http://gcdn.pinoygame.net/"
+#define kBankURL      "http://bank.pinoygame.net/webview?sid="
+#define kConfigFile   "config.txt"
+#define kLanguageFile "language.txt"
+#define kNewsURL      "http://gcdn.pinoygame.net/news.txt"
+#define kURLFanPage   "http://www.facebook.com/PinoyGame.net"
+#define kURLGameloeDeviceID "http://ids.gameloe.com/api/client"
+#define kSupportNumber "082299169836"
+
+#define USING_NS_STD using namespace std
+#define USING_NS_UI  using namespace ui
+#define USING_NS_NET using namespace cocos2d::network
+
+//scene data
+#define kSceneJsonLoading               "LoadingScene.json"
+#define kSceneJsonLogin                 "LoginScene.json"
+#define kSceneChooseGameJsonFile		"ChooseGameScene.json"
+#define kComponentUserInfoFile			"UserInfoCom.json"
+#define kComponentUserInfoOtherFile		"UserInfoOtherCom.json"
+#define kComponentPlayerInfoFile		"PlayerInfoCom.json"
+#define kSceneLobbyGameJsonFile			"LobbyScene.json"
+#define kItemListRoom					"ItemListRooms.json"
+#define kComponentSetting     			"SettingCom.json"
+#define kSceneJsonCapsaBantingGame      "CapsaBantingGameScene.json"
+#define kSceneJsonCapsaSusunGame        "CapsaSusunScene.json"
+#define kSceneJsonTongitsGame           "TongitsGameScene.json"
+#define kSettingRoomPopup				"SettingBox.json"
+#define kSettingRoomPopupT              "SettingBoxT.json"
+#define kSettingLobbyPopup				"SettingLanguages.json"
+#define kRankPopup						"RankPopup.json"
+#define kItemRank						"ItemRank.json"
+#define kEndGamePopup					"EndGamePopup.json"
+#define kPlayerInfoPopup                "PlayerInfoPopup.json"
+#define kEndGamePopupT					"EndGamePopupT.json"
+#define kFiredCardPopup                 "FiredCardPopup.json"
+#define kIAPPopup                       "IAPPopup.json"
+#define kIAPItem					    "IAPItem.json"
+#define kDailyBonusPopup                "DailyBonusPopup.json"
+#define kQuestBonusPopup                "QuestBonusPopup.json"
+#define kBonusItem					    "BonusItem.json"
+
+//languages
+#define LANG_INDONESIA	0
+#define LANG_ENGLISH		1
+#define	LANG_VIETNAMESE	2
+
+//sound data
+#define kSoundMusicTitle			   "thememusic.mp3"
+#define kSoundMusicLose                "lose1.mp3"
+#define kSoundMusicWin                 "Win.mp3"
+#define kSoundMusicBinhLung            "BinhLungSS.mp3"
+#define kSoundMusicMauBinh             "MauBinhSS.mp3"
+#define kSoundMusicStart               "Start.mp3"
+
+#define kSoundEffectButtonClick         "commonclick.mp3"
+#define kSoundEffectFire                "fire.mp3"
+#define kSoundEffectSoBai               "SoBaiSS.mp3"
+#define kSoundEffectDanhGui             "DanhGui.mp3"
+#define kSoundEffectJoinTable           "joinTable.mp3"
+#define kSoundEffectLeftTable           "leaveTable.mp3"
+#define kSoundEffectXepBai              "XepBaiSS.mp3"
+#define kSoundEffectCountDown           "CountDownSS.mp3"
+#define kSoundSochi                     "Sochi.mp3"
+
+
+//start smartfox command
+//send
+#define S_CLIENT_LOBBY					"client_listWaitingHandler"
+#define S_CLIENT_PLAYNOW				"client_choinhanh"
+#define S_CLIENT_JOIN_GAME				"client_joinroom"
+#define S_COMMAND_KICK_USER             "105"
+#define S_CLIENT_RANK					"client_rank"
+#define S_CLIENT_CHANGE_SETTING_GAME	"110"
+#define S_COMMAND_INVITE                "client_invite"
+#define S_COMMAND_GET_LISTWAITING       "client_listWaitingHandler"
+#define S_CLIENT_PLAYER_INFO            "info_player"
+
+//recieve
+#define C_CLIENT_BONUS_DAILY    "9"
+#define C_INFO_USER             "1"
+#define C_UPDATE_INFO_USER      "2"
+#define C_CLIENT_POSITION_DATA  "101"
+#define C_CLIENT_USER_JOIN_ROOM "102"
+#define C_CLIENT_USER_OUT_ROOM  "103"
+#define C_CLIENT_USER_CREATE_ROOM "6"
+#define C_CLIENT_RESET_GAME     "108"
+#define C_CLIENT_STARTID        "126"
+#define C_CLIENT_LOBBY          "client_lobbyHandler"
+#define C_CLIENT_ERROR		    "7"
+#define C_CLIENT_PLAYNOW_RS	    "client_choinhanh_rs"
+#define C_CLIENT_CHANGE_ROUND   "123"
+#define C_CLIENT_FINISH         "125"
+#define C_CLIENT_STARTID        "126"
+#define C_CLIENT_DEAD_2         "130"
+#define C_CLIENT_END_SHOW_RESULT "131"
+#define C_CLIENT_RANK_RS		"client_rankRS"
+#define C_COMMAND_KICK_USER     "105"
+#define C_CHECK_RECONNECT       "8"
+#define C_GET_MIN_MAX_STAKE		"115"
+#define C_COMMAND_INVITE        "client_inviteRS"
+#define C_COMMAND_CHATCHEM      "124"
+#define C_COMMAND_GET_LISTWAITING "client_listWaitingHandlerRs"
+#define C_COMMAND_REMINDS       "client_reminds"
+#define C_CLIENT_PLAYER_INFO    "info_player_rs"
+//both send/recieve
+#define SC_CLIENT_CHANGE_SETTING_GAME	"110"
+#define SC_CLIENT_START_GAME    "120"
+#define SC_CLIENT_DANH_BAI      "122"
+#define SC_CLIENT_PING          "100"
+#define SC_CLIENT_BO_LUOT       "121"
+#define SC_COMMAND_AUTO         "cAuto"
+#define C_CLIENT_LEVELUP        "45"
+
+//end smartfox command
+
+//TONGITS
+//start smartfox command
+//send
+#define T_CHANGE_SETTING_GAME           "510"
+#define T_COMMAND_KICK_USER             "505"
+//recieve
+#define T_JOIN_TABLE                    "501"
+#define T_USER_JOIN_ROOM                "502"
+#define T_USER_OUT_ROOM                 "503"
+#define T_CLIENT_STARTID                "526"
+#define T_SHOW_POINT                    "532"
+#define T_GET_CARD_FROM_DECK            "522"
+#define T_CLIENT_FINISH                 "530"
+#define T_GET_MIN_MAX                   "515"
+#define T_NOTIFY_USER_JOIN_ROOM         "509"
+#define T_CHANGEPOT                     "529"
+#define T_CHANGE_POSITION               "507"
+#define T_GET_START_ID                  "531"
+#define T_KICK_BYUSER                   "504"
+#define T_KICKUSER                      "505"
+
+//both send/recieve
+#define T_START_GAME                   "520"
+#define T_DANH_BAI                     "521"
+#define T_AN_BAI                       "523"
+#define T_HA_BAI                       "524"
+#define T_AUTO_GUI_BAI                 "519"
+#define T_GUI_BAI                      "527"
+#define T_U                            "528"
+#define T_BAO_BAI                      "526"
+#define T_XACTHUC_BAO_BAI              "525"
+#define T_CLIENT_BO_LUOT               "521"
+#define T_CLIENT_PING                  "500"
+
+//const finish game
+
+#define NOWIN               50
+#define FN_DONG_HOA         28
+#define FN_RONG             29
+#define FN_RONG_DONG_HOA    30
+#define FN_TOI_NHAT         52
+#define FN_TOI_NHI          53
+#define FN_TOI_BA           54
+#define FN_TOI_CHOT         55
+#define FN_THUA_CONG        56
+
+//both send/recieve
+#define SC_CLIENT_CHANGE_SETTING_GAME	"110"
+#define SC_CLIENT_START_GAME    "120"
+#define SC_CLIENT_DANH_BAI      "122"
+#define SC_CLIENT_PING          "100"
+#define SC_CLIENT_BO_LUOT       "121"
+#define SC_COMMAND_AUTO         "cAuto"
+//end smartfox command
+
+//Susun game Start
+//send
+#define SS_S_GAME_START           "201"
+#define SS_S_CHANGE_POSITION      "202"
+#define SS_S_KICK                 "203"
+#define SS_S_NEW_CONFIG           "204"
+#define SS_S_PING                 "207"
+#define SS_S_XEP_XONG             "210"
+#define SS_S_BAO_MAU_BINH         "223"
+#define SS_S_MAU_BINH_3S3T        "224"
+#define SS_S_EMOTICON             "232"
+#define SS_S_MOD_START            "234"
+//recive
+#define SS_R_CONFIG               "205"
+#define SS_R_SPECTATOR            "206"
+#define SS_R_PING                 "208"
+#define SS_R_RENEW_SFS_ID         "209"
+#define SS_R_XEPXONG              "211"
+#define SS_R_MIN_MAX_STAKE		  "215"
+#define SS_R_USER_DATA            "216"
+#define SS_R_USER_DATA_RESUME     "217"
+#define SS_R_USER_DATA_END        "218"
+#define SS_R_CARDLIST             "219"
+#define SS_R_USER_DATA_END_VIEW   "220"
+#define SS_R_FULLTIME             "221"
+#define SS_R_RESTART              "222"
+#define SS_R_MAU_BINH             "225"
+#define SS_R_EMOTICON             "233"
+#define SS_R_PLUS                 "236"
+#define SS_R_SPEC                 "298"
+#define SS_R_MOD                  "299"
+#define SS_R_UPDATE_END_GAME      "eg"
+#define SS_R_ERROR                "0"
+
+
+//send/recive
+//Susun game End
+
+//macro to convert from int to string
+#define ccsf(...) CCString::createWithFormat(__VA_ARGS__)->getCString()
+
+#define kTransitionDurationInSec 0.8f
+#define __LOG(...) CCLOG("File: %s, Function: %s, Line: %d", __FILE__, __FUNCTION__, __LINE__); CCLOG(__VA_ARGS__);
+
+
+//message event
+#define LOGIN_NOT_VALID  1
+#define MAINTAIN_GAME  2
+#define DOMAIN_NOT_VALID  3
+#define LOGIN_INFO_NOT_ENOUGHT  4
+#define CANNOT_GET_INFO_USER  5
+#define DISCONNECT_DOUBLE_LOGIN  6
+#define KICK_DOUBLE_LOGIN  7
+#define CANNOT_CONNECT_SV  8
+#define BANNED_WHEN_LOGIN  9
+#define LOGIN_NOTENOUGHT_MONEY  10
+#define LOGIN_NOTENOUGHT_EXP  11
+#define LOGIN_NOTENOUGHT_VIP  12
+#define NOT_HAVE_TOUR   13
+#define NOT_BELONG_TOUR   14
+#define LOGIN_NOTI_TOUR   15
+#define LOGIN_NOTI_TOUR2   16
+#define MONEY_DAYLY   17
+#define DEMO_GAME   18
+#define RELOAD_PLEASE   19
+#define REMINDSTABLE   20
+#define RELOAD_EXT   21
+#define MINIGAME_MAINTAIN   22
+#define CANNOT_PLAY_MINI_GAME   23
+#define ADDCHIP_ERROS   24
+#define ADDCHIP_ERROS_2   25
+#define ADDCHIP_ERROS_3   26
+#define ADDCHIP_ERROS_4   28
+#define ADDCHIP_SUCCESS   27
+#define CHOINHANH_ERROS   29
+#define FRIENDSLIST_ERROS   30
+#define REPLAY_ERROS   31
+#define GETTCOIN_ERROS   32
+#define BANNICK   33
+#define ADMINKICK   34
+#define INVITE_ERROR   35
+#define INVITE_MYSELF_ERROR   36
+//		#define ACTION_NOT_VALID  37
+#define NOT_HAVE_ROOM   38
+#define END_OF_TOUR   39
+#define WRONG_ROOM_IN_TOUR   40
+#define DUPLICATE_IP_JOIN_ROOM   41
+#define CANNOT_JOIN_ROOM   42
+#define CHECK_REPLAY   43
+
+//IN GAME
+#define NOT_ENOUGH_MONEY   100
+#define NOT_IN_ROOM   101
+#define CANNOT_START_BECAUSE_END_TOUR   102
+#define ISNOT_PLAYING_ERROS   103
+#define IS_PLAYING_ERROS   104
+#define ROOM_NOT_GAME   105
+#define CANNOT_START_BECAUSE_DELAY   106
+#define DA_CHOI_KHONG_THE_BAT_DAU   107
+#define THIEU_NGUOI_KHONG_THE_BAT_DAU   108
+#define BAD_REQUESTS   109
+#define KO_CO_QUYEN_START   110
+#define BAD_ACTION_BECAUSE_IS_VIEWER   111
+#define BAD_ACTION_BECAUSE_NOT_TURN   112
+#define NOT_CONTAIN_CARDS   115
+#define CANNOT_ACTION_WHEN_PLAYING   119
+#define ONLY_MOD_CAN_CHANGE   120
+#define CANNOT_CHANGE_CUOC_MIN   121
+#define ACTION_NOT_VALID  123
+#define CANNOT_BO_LUOT_IN_FIRST   124
+#define NOT_CONTAIN_MAX_INDEXCARD   125
+#define ERROR_CHANGE_CUOC   126
+#define ERROR_CHANGE_CUOC1   127
+#define ERROR_CHANGE_CUOC2   128
+#define ON_AUTOPLAY   130
+#define OFF_AUTOPLAY   131
+#define INVALID_ACTION1 711
+#define INVALID_ACTION2 712
+#define INVALID_ACTION3 713
+#define INVALID_ACTION4 714
+#define INVALID_ACTION5 715
+
+//message key
+//login
+#define MSG_LOGIN_NOT_VALID   "MSG_LOGIN_NOT_VALID"
+#define MSG_MAINTAIN_GAME   "MSG_MAINTAIN_GAME"
+#define MSG_DOMAIN_NOT_VALID   "MSG_DOMAIN_NOT_VALID"
+#define MSG_LOGIN_INFO_NOT_ENOUGHT   "MSG_LOGIN_INFO_NOT_ENOUGHT"
+#define MSG_CANNOT_GET_INFO_USER   "MSG_CANNOT_GET_INFO_USER"
+#define MSG_DISCONNECT_DOUBLE_LOGIN   "MSG_DISCONNECT_DOUBLE_LOGIN"
+#define MSG_KICK_DOUBLE_LOGIN   "MSG_KICK_DOUBLE_LOGIN"
+#define MSG_CANNOT_CONNECT_SV   "MSG_CANNOT_CONNECT_SV"
+#define MSG_BANNED_WHEN_LOGIN   "MSG_BANNED_WHEN_LOGIN"
+#define MSG_LOGIN_NOTENOUGHT_MONEY   "MSG_LOGIN_NOTENOUGHT_MONEY"
+#define MSG_LOGIN_NOTENOUGHT_EXP   "MSG_LOGIN_NOTENOUGHT_EXP"
+#define MSG_LOGIN_NOTENOUGHT_VIP   "MSG_LOGIN_NOTENOUGHT_VIP"
+#define MSG_NOT_HAVE_TOUR   "MSG_NOT_HAVE_TOUR"
+#define MSG_NOT_BELONG_TOUR   "MSG_NOT_BELONG_TOUR"
+#define MSG_LOGIN_NOTI_TOUR   "MSG_LOGIN_NOTI_TOUR"
+#define MSG_LOGIN_NOTI_TOUR2   "MSG_LOGIN_NOTI_TOUR2"
+#define MSG_MONEY_DAYLY   "MSG_MONEY_DAYLY"
+#define MSG_DEMO_GAME   "MSG_DEMO_GAME"
+#define MSG_RELOAD_PLEASE   "MSG_RELOAD_PLEASE"
+#define MSG_REMINDSTABLE   "MSG_REMINDSTABLE"
+#define MSG_RELOAD_EXT   "MSG_RELOAD_EXT"
+#define MSG_MINIGAME_MAINTAIN   "MSG_MINIGAME_MAINTAIN"
+#define MSG_CANNOT_PLAY_MINI_GAME   "MSG_CANNOT_PLAY_MINI_GAME"
+#define MSG_ADDCHIP_ERROS   "MSG_ADDCHIP_ERROS"
+#define MSG_ADDCHIP_ERROS_2   "MSG_ADDCHIP_ERROS_2"
+#define MSG_ADDCHIP_ERROS_3   "MSG_ADDCHIP_ERROS_3"
+#define MSG_ADDCHIP_ERROS_4   "MSG_ADDCHIP_ERROS_4"
+#define MSG_ADDCHIP_SUCCESS   "MSG_ADDCHIP_SUCCESS"
+#define MSG_CHOINHANH_ERROS   "MSG_CHOINHANH_ERROS"
+#define MSG_FRIENDSLIST_ERROS   "MSG_FRIENDSLIST_ERROS"
+#define MSG_REPLAY_ERROS  "REPLAY_ERROS"
+#define MSG_GETTCOIN_ERROS  "GETTCOIN_ERROS"
+#define MSG_BANNICK  "MSG_BANNICK"
+#define MSG_ADMINKICK  "MSG_ADMINKICK"
+#define MSG_INVITE_ERROR  "MSG_INVITE_ERROR"
+#define MSG_INVITE_MYSELF_ERROR  "MSG_INVITE_MYSELF_ERROR"
+//		#define MSG_ACTION_NOT_VALID  "37"
+#define MSG_NOT_HAVE_ROOM  "MSG_NOT_HAVE_ROOM"
+#define MSG_END_OF_TOUR  "MSG_END_OF_TOUR"
+#define MSG_WRONG_ROOM_IN_TOUR  "MSG_WRONG_ROOM_IN_TOUR"
+#define MSG_DUPLICATE_IP_JOIN_ROOM  "MSG_DUPLICATE_IP_JOIN_ROOM"
+#define MSG_CANNOT_JOIN_ROOM  "MSG_CANNOT_JOIN_ROOM"
+#define MSG_CHECK_REPLAY  "MSG_CHECK_REPLAY"
+#define MSG_CONFIRM_KICK  "MSG_CONFIRM_KICK"
+
+//in game
+#define MSG_NOT_ENOUGH_MONEY  "MSG_NOT_ENOUGH_MONEY"
+#define MSG_NOT_IN_ROOM  "MSG_NOT_IN_ROOM"
+#define MSG_CANNOT_START_BECAUSE_END_TOUR  "MSG_CANNOT_START_BECAUSE_END_TOUR"
+#define MSG_ISNOT_PLAYING_ERROS  "MSG_ISNOT_PLAYING_ERROS"
+#define MSG_IS_PLAYING_ERROS  "MSG_IS_PLAYING_ERROS"
+#define MSG_ROOM_NOT_GAME  "MSG_ROOM_NOT_GAME"
+#define MSG_CANNOT_START_BECAUSE_DELAY  "MSG_CANNOT_START_BECAUSE_DELAY"
+#define MSG_DA_CHOI_KHONG_THE_BAT_DAU  "MSG_DA_CHOI_KHONG_THE_BAT_DAU"
+#define MSG_THIEU_NGUOI_KHONG_THE_BAT_DAU  "MSG_THIEU_NGUOI_KHONG_THE_BAT_DAU"
+#define MSG_BAD_REQUESTS  "MSG_BAD_REQUESTS"
+#define MSG_KO_CO_QUYEN_START  "MSG_KO_CO_QUYEN_START"
+#define MSG_BAD_ACTION_BECAUSE_IS_VIEWER  "MSG_BAD_ACTION_BECAUSE_IS_VIEWER"
+#define MSG_BAD_ACTION_BECAUSE_NOT_TURN  "MSG_BAD_ACTION_BECAUSE_NOT_TURN"
+#define MSG_NOT_CONTAIN_CARDS  "MSG_NOT_CONTAIN_CARDS"
+#define MSG_CANNOT_ACTION_WHEN_PLAYING  "MSG_CANNOT_ACTION_WHEN_PLAYING"
+#define MSG_ONLY_MOD_CAN_CHANGE  "MSG_ONLY_MOD_CAN_CHANGE"
+#define MSG_CANNOT_CHANGE_CUOC_MIN  "MSG_CANNOT_CHANGE_CUOC_MIN"
+#define MSG_ACTION_NOT_VALID   "MSG_ACTION_NOT_VALID"
+#define MSG_CANNOT_BO_LUOT_IN_FIRST  "MSG_CANNOT_BO_LUOT_IN_FIRST"
+#define MSG_NOT_CONTAIN_MAX_INDEXCARD  "MSG_NOT_CONTAIN_MAX_INDEXCARD"
+#define MSG_ERROR_CHANGE_CUOC  "MSG_ERROR_CHANGE_CUOC"
+#define MSG_ERROR_CHANGE_CUOC1  "MSG_ERROR_CHANGE_CUOC1"
+#define MSG_ERROR_CHANGE_CUOC2  "MSG_ERROR_CHANGE_CUOC2"
+#define MSG_ON_AUTOPLAY   "MSG_ON_AUTOPLAY"
+#define MSG_OFF_AUTOPLAY   "MSG_OFF_AUTOPLAY"
+
+#endif /* defined(__IndoGame__Constant__) */

@@ -1,0 +1,83 @@
+
+emo_7.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+10nam
+  rotate: false
+  xy: 2, 66
+  size: 236, 60
+  orig: 236, 60
+  offset: 0, 0
+  index: -1
+2222
+  rotate: false
+  xy: 240, 83
+  size: 157, 43
+  orig: 157, 43
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 608, 66
+  size: 60, 99
+  orig: 60, 99
+  offset: 0, 0
+  index: -1
+buzz
+  rotate: false
+  xy: 200, 42
+  size: 22, 22
+  orig: 22, 22
+  offset: 0, 0
+  index: -1
+hand
+  rotate: true
+  xy: 399, 22
+  size: 104, 125
+  orig: 104, 125
+  offset: 0, 0
+  index: -1
+hand2
+  rotate: true
+  xy: 709, 78
+  size: 48, 77
+  orig: 48, 77
+  offset: 0, 0
+  index: -1
+handupper
+  rotate: false
+  xy: 2, 7
+  size: 51, 25
+  orig: 51, 25
+  offset: 0, 0
+  index: -1
+head2
+  rotate: false
+  xy: 526, 42
+  size: 80, 84
+  orig: 80, 84
+  offset: 0, 0
+  index: -1
+leg
+  rotate: false
+  xy: 608, 2
+  size: 67, 62
+  orig: 67, 62
+  offset: 0, 0
+  index: -1
+legupper
+  rotate: false
+  xy: 788, 85
+  size: 47, 41
+  orig: 47, 41
+  offset: 0, 0
+  index: -1
+quantu
+  rotate: false
+  xy: 2, 34
+  size: 196, 30
+  orig: 196, 30
+  offset: 0, 0
+  index: -1

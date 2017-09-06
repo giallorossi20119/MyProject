@@ -1,0 +1,19 @@
+
+bad.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2222
+  rotate: false
+  xy: 114, 69
+  size: 157, 43
+  orig: 157, 43
+  offset: 0, 0
+  index: -1
+222222
+  rotate: false
+  xy: 2, 2
+  size: 110, 110
+  orig: 110, 110
+  offset: 0, 0
+  index: -1

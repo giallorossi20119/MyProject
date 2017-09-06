@@ -1,0 +1,27 @@
+
+girl.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+girl
+  rotate: false
+  xy: 2, 29
+  size: 428, 476
+  orig: 428, 476
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 2, 2
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 432, 393
+  size: 111, 112
+  orig: 118, 118
+  offset: 3, 3
+  index: -1

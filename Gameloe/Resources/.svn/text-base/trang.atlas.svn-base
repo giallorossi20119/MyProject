@@ -1,0 +1,13 @@
+
+trang.png
+size: 256,32
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+trang
+  rotate: false
+  xy: 2, 2
+  size: 199, 14
+  orig: 210, 15
+  offset: 5, 1
+  index: -1

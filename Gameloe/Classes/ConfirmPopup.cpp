@@ -1,0 +1,136 @@
+//
+//  ConfirmPopup.cpp
+//  IndoGame
+//
+//  Created by longnh on 8/7/14.
+//
+//
+#include "ConfirmPopup.h"
+
+std::string ConfirmPopup::ON_CONFIRM = "confirm";
+std::string ConfirmPopup::ON_CANCEL = "cancel";
+
+
+/*************************************************************/
+/* @author longnh												 */
+/* Constructor/Destructor functions							 */
+/*************************************************************/
+ConfirmPopup::ConfirmPopup()
+{
+    m_bConvert2Alert = false;
+}
+
+ConfirmPopup::ConfirmPopup(std::string sMsr)
+{
+	m_sMsr = sMsr;
+}
+
+ConfirmPopup::~ConfirmPopup()
+{
+}
+
+ConfirmPopup* ConfirmPopup::create()
+{
+	ConfirmPopup* popup = new ConfirmPopup();
+	popup->autorelease();
+	return popup;
+}
+ConfirmPopup* ConfirmPopup::create(std::string sMsr)
+{
+	ConfirmPopup* popup = new ConfirmPopup(sMsr);
+	popup->autorelease();
+	return popup;
+}
+/* END CONSTRUCTOR/DESTRUCTOR FUNCTIONS						 */
+
+
+/*************************************************************/
+/* @author longnh												 */
+/* Start pragma onOpen/onClose functions					 */
+/*************************************************************/
+void ConfirmPopup::onOpen()
+{
+	BasePopup::onOpen();
+	Size deviceSize = Director::getInstance()->getWinSize();
+	m_pLayout = dynamic_cast<Layout*>(cocostudio::GUIReader::getInstance()->widgetFromJsonFile("ConfirmPopup.json"));
+	m_pLayout->setAnchorPoint(Vec2(0.5f, 0.5f));
+	m_pLayout->setPosition(Vec2(deviceSize.width/2, deviceSize.height/2));
+	this->addChild(m_pLayout);
+
+	Button* btnCancel = static_cast<Button*>(Helper::seekWidgetByName(m_pLayout, "btnCancel"));
+	btnCancel->addTouchEventListener(CC_CALLBACK_2(ConfirmPopup::onTouchCancel, this));
+	Button* btnConfirm = static_cast<Button*>(Helper::seekWidgetByName(m_pLayout, "btnConfirm"));
+	btnConfirm->addTouchEventListener(CC_CALLBACK_2(ConfirmPopup::onTouchConfirm, this));
+	Text* tfContent = static_cast<Text*>(Helper::seekWidgetByName(m_pLayout, "lblContent"));
+	tfContent->setString(m_sMsr.c_str());
+	fadeInContent();
+    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(ConfirmPopup::changeLanguage), EVENT_LANGUAGE_CHANGE, nullptr);
+    setTextLanguage();
+    setLightPosition();
+}
+
+void ConfirmPopup::changeToAlert()
+{
+    CCLOG("ConfirmPopup::changeToAlert");
+    m_bConvert2Alert = true;
+    Button* btnCancel = static_cast<Button*>(Helper::seekWidgetByName(m_pLayout, "btnCancel"));
+    btnCancel->setVisible(false);
+	Button* btnConfirm = static_cast<Button*>(Helper::seekWidgetByName(m_pLayout, "btnConfirm"));
+	btnConfirm->setPositionX(btnConfirm->getPositionX() - 100);
+}
+
+void ConfirmPopup::onClose()
+{
+    m_bConvert2Alert = false;
+	BasePopup::onClose();
+}
+/* END PRAGMA ONOPEN/ONCLOSE FUNCTIONS						 */
+
+
+/*************************************************************/
+/* @author longnh												 */
+/* Start pragma event handlers functions					 */
+/*************************************************************/
+void ConfirmPopup::onTouchCancel(Ref* pSender, Widget::TouchEventType type)
+{
+	if (type != Widget::TouchEventType::ENDED) return;
+    CCLOG("onTouchCancel1");
+	getSpecialEventDispatcher()->dispatchCustomEvent(ConfirmPopup::ON_CANCEL);
+    CCLOG("onTouchCancel2");
+    //if(!m_bConvert2Alert)
+    {
+        CCLOG("onTouchCancel3");
+        BaseScene* scene = static_cast<BaseScene*>(Director::getInstance()->getRunningScene());
+        scene->closePopup(this);
+    }
+}
+
+void ConfirmPopup::onTouchConfirm(Ref* pSender, Widget::TouchEventType type)
+{
+	if (type != Widget::TouchEventType::ENDED) return;
+
+	getSpecialEventDispatcher()->dispatchCustomEvent(ConfirmPopup::ON_CONFIRM);
+    //if(!m_bConvert2Alert)
+    {
+        BaseScene* scene = static_cast<BaseScene*>(Director::getInstance()->getRunningScene());
+        scene->closePopup(this);
+    }
+}
+
+void ConfirmPopup::changeLanguage(Ref* obj)
+{
+    setTextLanguage();
+}
+
+void ConfirmPopup::setTextLanguage()
+{
+    TextBMFont* bmfTitle = static_cast<TextBMFont*>(Helper::seekWidgetByName(m_pLayout, "bmfTitle"));
+    bmfTitle->setString(ResourceManager::getInstance()->getTextByName(kTEXT_CONFIRM));
+    Button* btnCancel = static_cast<Button*>(Helper::seekWidgetByName(m_pLayout, "btnCancel"));
+    TextBMFont* bmfCancel = static_cast<TextBMFont*>(btnCancel->getChildByName("bmfCancel"));
+    bmfCancel->setString(ResourceManager::getInstance()->getTextByName(kTEXT_CANCEL));
+	Button* btnConfirm = static_cast<Button*>(Helper::seekWidgetByName(m_pLayout, "btnConfirm"));
+    TextBMFont* bmfConfirm = static_cast<TextBMFont*>(btnConfirm->getChildByName("bmfConfirm"));
+    bmfConfirm->setString(ResourceManager::getInstance()->getTextByName(kTEXT_OK));
+}
+/* END PRAGMA EVENT HANDLERS FUNCTIONS					     */

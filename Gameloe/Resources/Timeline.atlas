@@ -1,0 +1,54 @@
+
+Timeline.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Timeglow
+  rotate: false
+  xy: 2, 2
+  size: 118, 118
+  orig: 118, 118
+  offset: 0, 0
+  index: -1
+bot
+  rotate: false
+  xy: 130, 124
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+horz
+  rotate: false
+  xy: 392, 238
+  size: 105, 12
+  orig: 105, 12
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 392, 219
+  size: 15, 17
+  orig: 23, 23
+  offset: 4, 2
+  index: -1
+time
+  rotate: false
+  xy: 258, 132
+  size: 118, 118
+  orig: 118, 118
+  offset: 0, 0
+  index: -1
+top
+  rotate: false
+  xy: 2, 122
+  size: 126, 128
+  orig: 134, 134
+  offset: 4, 2
+  index: -1
+vert
+  rotate: false
+  xy: 378, 132
+  size: 12, 118
+  orig: 12, 118
+  offset: 0, 0
+  index: -1

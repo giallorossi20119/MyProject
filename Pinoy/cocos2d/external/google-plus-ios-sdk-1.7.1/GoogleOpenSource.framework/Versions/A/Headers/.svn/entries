@@ -1,364 +1,0 @@
-10
-
-dir
-0
-https://svn3.tamtay.vn/s1/IndoGame/trunk/cocos2d/external/google-plus-ios-sdk-1.7.1/GoogleOpenSource.framework/Versions/A/Headers
-https://svn3.tamtay.vn/s1
-add
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-c20f7764-6f2a-4162-8c7a-c19871349829
-
-GTLPlus.h
-file
-
-
-
-add
-
-OpenInChromeController.h
-file
-
-
-
-add
-
-GTLBase64.h
-file
-
-
-
-add
-
-GTLPlusActivityFeed.h
-file
-
-
-
-add
-
-GTMHTTPFetcherLogging.h
-file
-
-
-
-add
-
-GTLPlusCommentFeed.h
-file
-
-
-
-add
-
-GTMNSDictionary+URLArguments.h
-file
-
-
-
-add
-
-GTLRuntimeCommon.h
-file
-
-
-
-add
-
-GTLFramework.h
-file
-
-
-
-add
-
-GTLPlusAclentryResource.h
-file
-
-
-
-add
-
-GTMHTTPFetcherService.h
-file
-
-
-
-add
-
-GTLPlusAcl.h
-file
-
-
-
-add
-
-GTMOAuth2Authentication.h
-file
-
-
-
-add
-
-GTMObjC2Runtime.h
-file
-
-
-
-add
-
-GTLQuery.h
-file
-
-
-
-add
-
-GTMGarbageCollection.h
-file
-
-
-
-add
-
-GTLObject.h
-file
-
-
-
-add
-
-GTLBatchQuery.h
-file
-
-
-
-add
-
-GTLUploadParameters.h
-file
-
-
-
-add
-
-GoogleOpenSource.h
-file
-
-
-
-add
-
-GTLQueryPlus.h
-file
-
-
-
-add
-
-GTLPlusPerson.h
-file
-
-
-
-add
-
-GTLPlusMomentsFeed.h
-file
-
-
-
-add
-
-GTLPlusPeopleFeed.h
-file
-
-
-
-add
-
-GTMDefines.h
-file
-
-
-
-add
-
-GTLBatchResult.h
-file
-
-
-
-add
-
-GTLErrorObject.h
-file
-
-
-
-add
-
-GTMLogger.h
-file
-
-
-
-add
-
-GTMHTTPFetcher.h
-file
-
-
-
-add
-
-GTLJSONParser.h
-file
-
-
-
-add
-
-GTMHTTPUploadFetcher.h
-file
-
-
-
-add
-
-GTLPlusPlace.h
-file
-
-
-
-add
-
-GTLPlusItemScope.h
-file
-
-
-
-add
-
-GTLDateTime.h
-file
-
-
-
-add
-
-GTMNSString+URLArguments.h
-file
-
-
-
-add
-
-GTLService.h
-file
-
-
-
-add
-
-GTLPlusActivity.h
-file
-
-
-
-add
-
-GTLTargetNamespace.h
-file
-
-
-
-add
-
-GTLPlusMoment.h
-file
-
-
-
-add
-
-GTLServicePlus.h
-file
-
-
-
-add
-
-GTMOAuth2ViewControllerTouch.h
-file
-
-
-
-add
-
-GTLPlusComment.h
-file
-
-
-
-add
-
-GTLUtilities.h
-file
-
-
-
-add
-
-GTMOAuth2SignIn.h
-file
-
-
-
-add
-
-GTMHTTPFetchHistory.h
-file
-
-
-
-add
-
-GTLDefines.h
-file
-
-
-
-add
-
-GTMMethodCheck.h
-file
-
-
-
-add
-
-GTLPlusConstants.h
-file
-
-
-
-add
-

@@ -1,0 +1,197 @@
+//
+//  TableStoreViewController.m
+//  NooPhuocThinh
+//
+//  Created by MAC_OSX on 3/18/14.
+//  Copyright (c) 2014 MAC_OSX. All rights reserved.
+//
+
+#import "TableStoreViewController.h"
+
+@interface TableStoreViewController ()
+
+@end
+
+@implementation TableStoreViewController
+
+@synthesize delegate;
+@synthesize listStore;
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    //--set background for TableView
+    [self.tableView setBackgroundView:nil];
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+//    [self.tableView setSeparatorColor:[UIColor clearColor]];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma  mark - tableview
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return  1;
+}
+
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //-- remove lable nodata
+    [self removeLableNoDataFromTableView:self.tableView withIndex:0];
+    
+    if ([listStore count] == 0) {
+        
+        //-- Load the news
+        CGRect frame = [self.tableView frame];
+        frame.origin.x = 0.0f;
+        frame.origin.y = 0.0f;
+        frame = CGRectInset(frame, 0.0f, 0.0f);
+        
+        //-- add lable no data
+        [self addLableNoDataToTableView:self.tableView withIndex:0 withFrame:frame byTitle:TITLE_NoData_Default];
+    }
+    
+    return listStore.count;
+}
+
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{    
+    static NSString *CellIdentifier = @"CellCustomStore";
+    CellCustomStore *cell = (CellCustomStore *) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+//    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    if (cell == nil) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CellCustomStore" owner:nil options:nil];
+        
+        for (id currentObject in topLevelObjects) {
+            if ([currentObject isKindOfClass:[UITableViewCell class]]) {
+                cell = (CellCustomStore *) currentObject;
+                break;
+            }
+        }
+    }
+    
+    [self setDataForTableViewCell:cell withIndexPath:indexPath];
+    
+    return cell;
+}
+
+
+-(CellCustomStore *)setDataForTableViewCell:(CellCustomStore *)cell withIndexPath:(NSIndexPath *)indexPath
+{
+    Store *aStore=nil;
+    
+    if (listStore.count >0)
+        aStore = (Store *)[listStore objectAtIndex:indexPath.row];
+    
+    [cell.imgViewProduct setImageWithURL:[NSURL URLWithString:aStore.thumbnailImagePath]];
+    
+    
+    [cell.imgViewProduct setImageWithURL:[NSURL URLWithString:aStore.thumbnailImagePath] placeholderImage:[UIImage imageNamed:@"LichdienDefault.png"] options:SDWebImageProgressiveDownload progress:^(NSUInteger receivedSize, long long expectedSize) {
+        //
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+        
+        if(image !=nil)
+            cell.imgViewProduct.image = image;
+        else
+            cell.imgViewProduct.image = [UIImage imageNamed:@"LichdienDefault.png"];
+    }];
+    
+    [cell.imgViewProduct setContentMode:UIViewContentModeScaleAspectFill];
+    [cell.imgViewProduct setClipsToBounds:YES];
+    
+    [Utility scaleImage:cell.imgViewProduct.image toSize:CGSizeMake(90, 90)];
+    
+    if ((indexPath.row%2) == 0)
+        cell.contentView.backgroundColor = COLOR_CELL_0;
+    else
+        cell.contentView.backgroundColor = COLOR_CELL_1;
+    
+    if(aStore)
+    {
+        NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
+        [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSString *value = [numberFormatter stringFromNumber:[NSNumber numberWithInt:[aStore.priceUnit integerValue]]];
+        
+        cell.lblNameProduct.text = aStore.name;
+        cell.lblDescriptionProduct.text = aStore.shortBody;
+        cell.lblValueProduct.text = [NSString stringWithFormat:@"Giá: %@ VNĐ",value];
+        //-- dynamic height texview
+        
+        //-- set height for name
+        //CGFloat heightNameHTML = [Utility heightFromString:aStore.name maxWidth:201 font:[UIFont boldSystemFontOfSize:14]];
+        //[UIView view:cell.lblNameProduct setHeight:heightNameHTML+10];
+        
+        //-- set description
+        //[UIView view:cell.lblDescriptionProduct setY:(cell.lblNameProduct.frame.origin.y + heightNameHTML + 2)];
+    }
+    
+    return cell;
+}
+
+
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 106;
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{    
+    //-- pass Delegate
+    [[self delegate] goToDetailStoreViewControllerWithListData:listStore withIndexRow:indexPath.row];
+}
+
+
+#pragma mark - Add or Remove label Nodata
+
+//-- show lable no data
+-(void) addLableNoDataToTableView:(UITableView *)tableview withIndex:(NSInteger) index withFrame:(CGRect) frameLable byTitle:(NSString *) titleData {
+    
+    UILabel *lblNodata = [[UILabel alloc] initWithFrame:frameLable];
+    lblNodata.tag = index;
+    lblNodata.backgroundColor = [UIColor clearColor];
+    lblNodata.textColor = [UIColor whiteColor];
+    lblNodata.textAlignment = UITextAlignmentCenter;
+    lblNodata.lineBreakMode = NSLineBreakByWordWrapping;
+    lblNodata.numberOfLines = 0;
+    lblNodata.text = titleData;
+    
+    [tableview addSubview:lblNodata];
+}
+
+//-- remove lable no data
+-(void) removeLableNoDataFromTableView:(UITableView *)tableview withIndex:(NSInteger) index {
+    
+    for (UIView *lblNadata in tableview.subviews) {
+        
+        if ([lblNadata isKindOfClass:[UILabel class]] && lblNadata.tag == index) {
+            
+            [lblNadata removeFromSuperview];
+            break;
+        }
+    }
+}
+
+
+@end

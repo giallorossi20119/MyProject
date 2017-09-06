@@ -1,0 +1,88 @@
+//
+//  MainViewController.h
+//  NooPhuocThinh
+//
+//  Created by MAC_OSX on 12/3/13.
+//  Copyright MAC_OSX 2013. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "AboutViewController.h"
+#import "FanZoneViewController.h"
+#import "MusicHomeViewController.h"
+#import "NewsViewController.h"
+#import "PhotoViewController.h"
+#import "ProfileViewController.h"
+#import "SettingsViewController.h"
+#import "StoreViewController.h"
+#import "TopUserViewController.h"
+#import "VideoViewController.h"
+#import "CBAutoScrollLabel.h"
+#import "VMDataBase.h"
+#import "JPRadialProgressView.h"
+#import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "MusicAlbumViewController.h"
+#import "ScheduleViewController.h"
+#import "Utility.h"
+#import  "ProfileViewController.h"
+
+@interface MainViewController : BaseViewController
+<UIScrollViewDelegate,BaseViewControllerDelegate>
+{
+    BOOL pageControlUsed;
+    
+    IBOutlet UILabel            *singerName;
+    IBOutlet UIButton           *btnSearch;
+    IBOutlet UIButton           *btnNews;
+    IBOutlet UIButton           *btnMusic;
+    IBOutlet UIButton           *btnVideo;
+    IBOutlet UIButton           *btnPhoto;
+    IBOutlet UIButton           *btnProfile;
+    IBOutlet UIButton           *btnFanZone;
+    IBOutlet UIButton           *btnTopUser;
+    IBOutlet UIButton           *btnAbout;
+    IBOutlet UIButton           *btnSchedule;
+    IBOutlet UIButton           *btnStore;
+    IBOutlet UIButton           *btnAutoScrollLabel;
+    IBOutlet UIImageView        *imgCover;
+    
+    NSMutableArray              *_dataSourceAlbum;
+    BOOL                        _isCacheDataSourceAlbum;
+    NSMutableArray              *arrAlbums;
+    NSInteger                   _currentPage;
+    NSMutableArray              *arrImageCover;
+    UIImageView                 *newPageView;
+    
+    BOOL isSelectedFanZone;
+}
+
+@property (nonatomic, retain) IBOutlet UIScrollView           *scrollImage;
+@property (nonatomic, retain) IBOutlet UIScrollView           *scrollFunction;
+@property (nonatomic, retain) IBOutlet UIView                 *viewFirst;
+@property (nonatomic, retain) IBOutlet UIView                 *viewSecond;
+@property (nonatomic, retain) IBOutlet UIPageControl          *pageCtrImage;
+@property (nonatomic, retain) IBOutlet UIPageControl          *pageCtrFunction;
+@property (nonatomic, weak)   IBOutlet CBAutoScrollLabel      *autoScrollLabel;
+@property (nonatomic, strong) JPRadialProgressView            *radialProgress;
+@property (nonatomic, retain) NSTimer                         *timerAuto;
+
+//--ACTION
+- (IBAction)clicToBtnSearch:(id)sender;
+- (IBAction)clickToBtnNews:(id)sender;
+- (IBAction)clickToBtnMusic:(id)sender;
+- (IBAction)clickToBtnVideo:(id)sender;
+- (IBAction)clickToBtnPhoto:(id)sender;
+- (IBAction)clickToBtnProfile:(id)sender;
+- (IBAction)clickToBtnFanZone:(id)sender;
+- (IBAction)clickToBtnTopUser:(id)sender;
+- (IBAction)clickToBtnAbout:(id)sender;
+- (IBAction)clickToBtnSchedule:(id)sender;
+- (IBAction)clickToBtnStore:(id)sender;
+- (IBAction)clickBtnAutoScrollLabel:(id)sender;
+
+//--change pageControl
+- (IBAction)changepage:(id)sender;
+
+@end

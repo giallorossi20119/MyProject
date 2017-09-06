@@ -1,0 +1,64 @@
+#ifndef LOGINPOPUP_H
+#define LOGINPOPUP_H
+
+#include <iostream>
+#include "rapidjson.h"
+#include "document.h"
+#include "cocos2d.h"
+#include "cocos-ext.h"
+#include "Constant.h"
+#include "TextData.h"
+#include "CocosGUI.h"
+#include "cocostudio/CCSGUIReader.h"
+#include "cocostudio/CCActionManagerEx.h"
+
+#include "BasePopup.h"
+#include "SignupPopup.h"
+#include "BaseScene.h"
+#include "ResourceManager.h"
+#include "SFSConnection.h"
+#include "TTutil.h"
+#include "EventConst.h"
+#include "LoginHandler.h"
+
+class SignUpPopup;
+class SFSConnection;
+
+USING_NS_CC;
+USING_NS_STD;
+
+class LoginPopup :
+	public BasePopup
+{
+public:
+
+	LoginPopup();
+	~LoginPopup();
+
+	static LoginPopup* create();
+	
+	void onOpen();
+	void onClose();
+private:
+	void onTouchLoginBtn(Ref* sender, Widget::TouchEventType type);
+	void onTouchSignUpBtn(Ref* sender, Widget::TouchEventType type);
+	void onTouchForgotPwBtn(Ref* sender, Widget::TouchEventType type);
+	void onTouchInputUsername(Ref* sender, Widget::TouchEventType type);
+	void onTouchInputPassword(Ref* sender, Widget::TouchEventType type);
+	void onLoseFocusInputUser(Widget* lastWidget, Widget* nextWidget);
+	void onInputUserEvent(Ref* sender, TextField::EventType type);
+	void onInputPasswordEvent(Ref* sender, TextField::EventType type);
+
+	Button* m_btnLogin;
+    Button* m_btnClose;
+	Button* m_btnSignUp;
+	Button* m_btnForgotPW;
+    ImageView* m_imgEmail;
+    ImageView* m_imgPassword;
+	TextField* m_txtEmail;
+	TextField* m_txtPassword;
+    CheckBox*  m_chkSave;
+};
+
+
+#endif // !LOGINPOPUP_H

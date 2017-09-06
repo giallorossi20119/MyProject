@@ -1,0 +1,12 @@
+
+good.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Lstar
+  rotate: false
+  xy: 2, 2
+  size: 53, 54
+  orig: 53, 54
+  offset: 0, 0
+  index: -1

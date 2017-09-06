@@ -1,0 +1,83 @@
+
+emo_2.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 111, 32
+  size: 105, 81
+  orig: 105, 81
+  offset: 0, 0
+  index: -1
+closed
+  rotate: true
+  xy: 431, 174
+  size: 80, 44
+  orig: 80, 44
+  offset: 0, 0
+  index: -1
+e1
+  rotate: true
+  xy: 2, 2
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 218, 34
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 16
+  size: 107, 97
+  orig: 107, 97
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 431, 141
+  size: 42, 31
+  orig: 42, 31
+  offset: 0, 0
+  index: -1
+non
+  rotate: true
+  xy: 280, 142
+  size: 112, 149
+  orig: 112, 149
+  offset: 0, 0
+  index: -1
+non2
+  rotate: true
+  xy: 280, 28
+  size: 112, 149
+  orig: 112, 149
+  offset: 0, 0
+  index: -1
+shet
+  rotate: false
+  xy: 218, 63
+  size: 60, 50
+  orig: 60, 50
+  offset: 0, 0
+  index: -1
+xanh
+  rotate: false
+  xy: 2, 115
+  size: 137, 139
+  orig: 137, 139
+  offset: 0, 0
+  index: -1
+xanh2
+  rotate: false
+  xy: 141, 115
+  size: 137, 139
+  orig: 137, 139
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,71 @@
+10
+
+dir
+1236
+https://svn3.tamtay.vn/s1/Gameloe/trunk/cocos2d/external/chipmunk/prebuilt/android
+https://svn3.tamtay.vn/s1
+
+
+
+2015-04-07T06:57:04.504116Z
+1189
+vu.nguyenviet@tamtay.vn
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c20f7764-6f2a-4162-8c7a-c19871349829
+
+Android.mk
+file
+
+
+
+
+2015-02-01T00:23:48.000000Z
+20d15c1175135a001a640e05e72c18a8
+2015-04-07T06:57:04.504116Z
+1189
+vu.nguyenviet@tamtay.vn
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+266
+
+armeabi
+dir
+
+armeabi-v7a
+dir
+
+x86
+dir
+

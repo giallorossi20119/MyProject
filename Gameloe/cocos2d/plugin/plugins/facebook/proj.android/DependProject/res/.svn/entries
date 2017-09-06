@@ -1,70 +1,0 @@
-10
-
-dir
-1236
-https://svn3.tamtay.vn/s1/Gameloe/trunk/cocos2d/plugin/plugins/facebook/proj.android/DependProject/res
-https://svn3.tamtay.vn/s1
-
-
-
-2015-04-07T06:54:55.316271Z
-1188
-vu.nguyenviet@tamtay.vn
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-c20f7764-6f2a-4162-8c7a-c19871349829
-
-drawable
-dir
-
-drawable-hdpi
-dir
-
-drawable-ldpi
-dir
-
-drawable-mdpi
-dir
-
-drawable-xhdpi
-dir
-
-layout
-dir
-
-values
-dir
-
-values-es
-dir
-
-values-hdpi
-dir
-
-values-he
-dir
-
-values-iw
-dir
-
-values-ldpi
-dir
-
-values-mdpi
-dir
-
-values-xhdpi
-dir
-

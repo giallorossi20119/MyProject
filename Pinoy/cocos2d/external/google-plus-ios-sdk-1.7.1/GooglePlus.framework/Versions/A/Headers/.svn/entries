@@ -1,0 +1,70 @@
+10
+
+dir
+0
+https://svn3.tamtay.vn/s1/IndoGame/trunk/cocos2d/external/google-plus-ios-sdk-1.7.1/GooglePlus.framework/Versions/A/Headers
+https://svn3.tamtay.vn/s1
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c20f7764-6f2a-4162-8c7a-c19871349829
+
+GPPShare.h
+file
+
+
+
+add
+
+GPPSignInButton.h
+file
+
+
+
+add
+
+GPPSignIn.h
+file
+
+
+
+add
+
+GooglePlus.h
+file
+
+
+
+add
+
+GPPDeepLink.h
+file
+
+
+
+add
+
+GPPURLHandler.h
+file
+
+
+
+add
+

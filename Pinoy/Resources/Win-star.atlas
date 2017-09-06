@@ -1,0 +1,27 @@
+
+Win-star.png
+size: 332,332
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+win/Win-fx1
+  rotate: false
+  xy: 0, 150
+  size: 182, 182
+  orig: 182, 182
+  offset: 0, 0
+  index: -1
+win/star
+  rotate: false
+  xy: 184, 303
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+win/win-fx2
+  rotate: false
+  xy: 0, 0
+  size: 177, 148
+  orig: 177, 148
+  offset: 0, 0
+  index: -1

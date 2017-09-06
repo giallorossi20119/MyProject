@@ -1,132 +1,0 @@
-10
-
-dir
-1236
-https://svn3.tamtay.vn/s1/Gameloe/trunk/cocos2d/external
-https://svn3.tamtay.vn/s1
-
-
-
-2015-04-20T07:56:11.254916Z
-1235
-vu.nguyenviet@tamtay.vn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-c20f7764-6f2a-4162-8c7a-c19871349829
-
-glfw3
-dir
-
-png
-dir
-
-win32-specific
-dir
-
-jpeg
-dir
-
-winrt-specific
-dir
-
-tinyxml2
-dir
-
-xxtea
-dir
-
-webp
-dir
-
-ConvertUTF
-dir
-
-smartfox
-dir
-
-unzip
-dir
-
-curl
-dir
-
-websockets
-dir
-
-json
-dir
-
-libGoogleConversionTracking.a
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-winrt_8.1-specific
-dir
-
-edtaa3func
-dir
-
-linux-specific
-dir
-
-sqlite3
-dir
-
-boost
-dir
-
-tiff
-dir
-
-wp_8.1-specific
-dir
-
-wp8-specific
-dir
-
-xxhash
-dir
-
-flatbuffers
-dir
-
-freetype2
-dir
-
-google-plus-ios-sdk-1.7.1
-dir
-
-FacebookSDK.framework
-dir
-
-facebook
-dir
-
-Box2D
-dir
-
-chipmunk
-dir
-

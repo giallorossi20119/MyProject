@@ -147,19 +147,6 @@
         [textField resignFirstResponder];
     }
     return NO; // We do not want UITextField to insert line-breaks.
-    
-//    [textField resignFirstResponder];
-//    if (textField==self.tfFirstName) {
-//        [self.tfLastName becomeFirstResponder];
-//    }else if (textField==self.tfLastName){
-//        [self.tfPhone becomeFirstResponder];
-//    }else if (textField==self.tfPhone){
-//        [self.tfEmail becomeFirstResponder];
-//    }else if (textField==self.tfEmail){
-//        [self.tfPassword becomeFirstResponder];
-//    }
-//    
-//    return YES;
 }
 
 @end
